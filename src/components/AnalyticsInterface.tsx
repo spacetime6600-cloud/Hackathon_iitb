@@ -75,9 +75,10 @@ export function AnalyticsInterface() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-heading-1 font-sans font-bold text-arctic leading-[1.1] max-w-4xl mx-auto mb-5"
+            className="text-heading-1 font-sans font-extrabold text-arctic leading-[1.05] max-w-3xl mx-auto mb-5"
           >
-            Visualize how autonomous AI agents <span className="highlight-shimmer">analyze, decide &amp; automate.</span>
+            Visualize How AI Agents<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Analyze, Decide &amp; Automate.</span>
           </motion.h2>
         </div>
 

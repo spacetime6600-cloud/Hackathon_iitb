@@ -23,8 +23,8 @@ export default {
         // Professional SaaS Typography Scale
         // H1 — Hero heading: 72px desktop, scales down gracefully
         'display': ['clamp(2.75rem, 5.5vw, 4.5rem)', { lineHeight: '0.97', letterSpacing: '-0.03em', fontWeight: '800' }],
-        // H2 — Section headings: 42–56px
-        'heading-1': ['clamp(2rem, 3.8vw, 3.25rem)', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '700' }],
+        // H2 — Section headings: 52–68px (up from 42–52px)
+        'heading-1': ['clamp(2.25rem, 4.5vw, 4.25rem)', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '700' }],
         // H3 — Card/sub headings: 22–28px
         'heading-2': ['clamp(1.375rem, 1.8vw, 1.75rem)', { lineHeight: '1.25', letterSpacing: '-0.015em', fontWeight: '600' }],
         // H4 — Small headings: 18–22px

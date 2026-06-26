@@ -75,10 +75,10 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-heading-1 font-sans font-bold text-arctic mb-5"
+            className="text-heading-1 font-sans font-extrabold text-arctic mb-5"
           >
-            What Enterprise <br className="hidden sm:block" />
-            <span className="highlight-shimmer">Leaders Say</span>
+            What Enterprise<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Leaders Say</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

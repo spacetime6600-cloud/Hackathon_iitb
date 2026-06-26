@@ -64,9 +64,10 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-          className="text-heading-1 font-sans font-bold text-arctic mb-6"
+          className="text-heading-1 font-sans font-extrabold text-arctic mb-6"
         >
-          Transform Your Enterprise with <span className="highlight-shimmer">Intelligent AI</span>
+          Transform Your Enterprise<br />
+          with <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Intelligent AI</span>
         </motion.h2>
 
         <motion.p
