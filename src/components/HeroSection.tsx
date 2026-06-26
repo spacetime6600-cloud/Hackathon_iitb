@@ -98,12 +98,12 @@ export function HeroSection() {
   return (
     <section id="hero" aria-labelledby="hero-heading" ref={containerRef} className="relative min-h-screen bg-oceanic-noir overflow-hidden flex flex-col font-sans">
       {/* Hero Content */}
-      <div className="flex-1 max-w-[1600px] w-full mx-auto px-6 flex flex-col lg:flex-row items-center pt-24 lg:pt-32 pb-20 relative z-10 gap-12 lg:gap-4 h-full">
+      <div className="flex-1 max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center pt-32 lg:pt-40 pb-32 relative z-10 gap-16 lg:gap-24 xl:gap-32 h-full">
         
         {/* Left Content (Typography & Social Proof) */}
         <motion.div 
           style={{ y: y2, opacity }}
-          className="w-full lg:w-[45%] xl:w-[40%] flex flex-col justify-center text-center lg:text-left mt-10 lg:mt-0 relative z-20"
+          className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left mt-10 lg:mt-0 relative z-20"
         >
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -120,19 +120,18 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-fluid-h1 leading-[1.1] tracking-tight font-mono font-bold text-arctic mb-8"
+            className="text-[clamp(52px,5vw,80px)] leading-[0.95] tracking-[-0.03em] font-mono font-bold text-arctic mb-8 max-w-[90%] mx-auto lg:mx-0"
           >
             Unlock Autonomous AI <br className="hidden lg:block"/>
             That <span className="text-transparent bg-clip-text bg-gradient-to-r from-mystic via-arctic to-mystic">Thinks,</span> <br className="hidden lg:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Learns &</span> <br className="hidden lg:block"/>
-            Automates.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Learns and Automates.</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-mystic/80 text-fluid-body font-sans leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10"
+            className="text-[#C8D2DA] text-[18px] font-sans leading-[1.7] max-w-[480px] mx-auto lg:mx-0 mb-8"
           >
             Empower enterprises with intelligent automation, predictive analytics, autonomous AI agents and real-time decision making through one unified platform.
           </motion.p>
@@ -141,7 +140,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.165, 0.84, 0.44, 1] }}
-            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-16"
+            className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start mb-24"
           >
             <button className="w-full sm:w-auto px-8 py-4 rounded-full font-sans font-bold text-oceanic-noir bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] shadow-[0_0_15px_rgba(0,220,255,0.3)] hover:shadow-[0_4px_20px_rgba(0,220,255,0.5)] hover:-translate-y-[2px] hover:scale-[1.02] hover:brightness-105 transition-all duration-300 ease-out-expo group flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] tracking-wide">
               Start Free Trial
@@ -160,12 +159,12 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-2xl p-6 md:p-8 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.35),_0_0_40px_rgba(0,220,255,0.05)] relative overflow-hidden max-w-2xl mx-auto lg:mx-0 bg-[#08121C]/80 backdrop-blur-xl"
+            className="rounded-2xl p-5 md:p-6 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.35),_0_0_40px_rgba(0,220,255,0.05)] relative overflow-hidden max-w-[480px] mx-auto lg:mx-0 bg-[#08121C]/80 backdrop-blur-xl"
           >
-            <h2 className="text-[#C7D2D9]/50 text-[10px] font-mono uppercase tracking-widest font-bold mb-6 relative z-10 text-center lg:text-left">
+            <h2 className="text-[#C7D2D9]/50 text-[10px] font-mono uppercase tracking-widest font-bold mb-5 relative z-10 text-center lg:text-left">
               Trusted by 2,500+ Global Businesses
             </h2>
-            <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-8 gap-y-6 relative z-10">
+            <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-6 gap-y-4 relative z-10">
               {/* Google */}
               <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-6">
@@ -209,11 +208,11 @@ export function HeroSection() {
         {/* Right Visualization (Highly Complex SVG Core & KPI Cards) */}
         <motion.div 
           style={{ y: y1 }}
-          className="w-full lg:w-[55%] xl:w-[60%] relative h-[600px] lg:h-[800px] flex items-center justify-center"
+          className="w-full lg:w-1/2 relative h-[600px] lg:h-[800px] flex items-center justify-center lg:translate-x-8"
         >
           {/* Ambient Core Glow */}
-          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(0,220,255,0.08)_0%,_transparent_50%)] blur-[60px] pointer-events-none mix-blend-screen" />
-          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,200,1,0.05)_0%,_transparent_50%)] blur-[40px] pointer-events-none mix-blend-screen" />
+          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(0,220,255,0.08)_0%,_transparent_50%)] blur-[60px] pointer-events-none mix-blend-screen" />
+          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,200,1,0.05)_0%,_transparent_50%)] blur-[40px] pointer-events-none mix-blend-screen" />
 
           {/* SVG Neural Network Base */}
           <motion.div 
@@ -221,9 +220,9 @@ export function HeroSection() {
               maskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)',
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)'
             }}
-            className="absolute inset-0 pointer-events-none flex items-center justify-center"
+            className="absolute inset-0 pointer-events-none flex items-center justify-center scale-110 origin-center"
           >
-            <svg viewBox="0 0 1000 1000" className="w-[150%] h-[150%] -translate-y-[10%]" preserveAspectRatio="xMidYMid slice">
+            <svg viewBox="0 0 1000 1000" className="w-[150%] h-[150%] -translate-y-[5%]" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <linearGradient id="neural-line" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#00B4FF" stopOpacity="0" />
