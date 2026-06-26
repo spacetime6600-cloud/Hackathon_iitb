@@ -64,9 +64,9 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-          className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-8"
+          className="text-heading-1 font-sans font-bold text-arctic mb-6"
         >
-          Transform Your Enterprise with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00DCFF] to-mystic">Intelligent AI</span>
+          Transform Your Enterprise with <span className="highlight-shimmer">Intelligent AI</span>
         </motion.h2>
 
         <motion.p
@@ -74,7 +74,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-          className="text-mystic/80 font-sans text-fluid-body leading-relaxed max-w-3xl mx-auto mb-12"
+          className="text-mystic/70 font-sans text-body-lg leading-relaxed max-w-prose-wide mx-auto mb-10"
         >
           Join thousands of organizations already using AI to automate workflows, improve productivity and accelerate growth.
         </motion.p>

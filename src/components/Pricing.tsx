@@ -85,11 +85,11 @@ function PricingCard({ plan, getPrice, activeCurrency, index }: { plan: any, get
             }`}>
               {plan.icon}
             </motion.div>
-            <h3 className="text-2xl font-sans text-arctic font-bold tracking-tight">{plan.name}</h3>
+            <h3 className="text-heading-2 font-sans font-semibold text-arctic tracking-tight">{plan.name}</h3>
           </div>
         </div>
         
-        <p className="text-mystic/70 font-sans text-sm leading-relaxed min-h-[40px] relative z-10">
+        <p className="text-mystic/70 font-sans text-body-sm leading-relaxed min-h-[40px] relative z-10">
           {plan.description}
         </p>
 
@@ -108,7 +108,7 @@ function PricingCard({ plan, getPrice, activeCurrency, index }: { plan: any, get
               <div className="mt-1 flex-shrink-0">
                 <Check className={`w-4 h-4 ${plan.isPopular ? 'text-[#00DCFF] drop-shadow-[0_0_5px_rgba(0,220,255,0.5)]' : 'text-mystic/80 group-hover:text-[#00DCFF]'}`} />
               </div>
-              <span className="text-mystic/80 font-sans text-sm group-hover:text-arctic transition-colors">
+              <span className="text-mystic/70 font-sans text-body-sm group-hover:text-arctic transition-colors">
                 {feature}
               </span>
             </li>
@@ -190,7 +190,7 @@ export function Pricing() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
           >
-            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">Transparent Pricing</span>
+            <span className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold">Transparent Pricing</span>
           </motion.div>
           <motion.h2
             id="pricing-heading"
@@ -198,7 +198,7 @@ export function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-6"
+            className="text-heading-1 font-sans font-bold text-arctic mb-5"
           >
             Flexible Pricing <br/> Built for Every Enterprise
           </motion.h2>
@@ -207,7 +207,7 @@ export function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-mystic/80 font-sans text-fluid-body max-w-2xl mx-auto mb-16"
+            className="text-mystic/70 font-sans text-body-lg max-w-prose-wide mx-auto mb-12"
           >
             Choose the perfect AI automation plan for your organization with transparent pricing and enterprise-grade scalability.
           </motion.p>

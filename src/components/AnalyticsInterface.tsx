@@ -64,17 +64,21 @@ export function AnalyticsInterface() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-mystic text-sm tracking-widest uppercase mb-4 font-mono font-semibold"
+            transition={{ duration: 0.6 }}
+            className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold mb-5"
           >
             Intelligent Automation Platform
           </motion.p>
-          <h2
+          <motion.h2
             id="dashboard-heading"
-            className="text-fluid-h2 text-arctic leading-[1.1] tracking-tight font-mono font-bold max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
+            className="text-heading-1 font-sans font-bold text-arctic leading-[1.1] max-w-4xl mx-auto mb-5"
           >
-            Visualize how autonomous AI agents <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">analyze, decide & automate.</span>
-          </h2>
+            Visualize how autonomous AI agents <span className="highlight-shimmer">analyze, decide &amp; automate.</span>
+          </motion.h2>
         </div>
 
         <motion.div 

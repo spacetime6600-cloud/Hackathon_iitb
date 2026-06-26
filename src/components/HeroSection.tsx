@@ -100,105 +100,148 @@ export function HeroSection() {
       {/* Hero Content */}
       <div className="flex-1 max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center pt-32 lg:pt-40 pb-32 relative z-10 gap-16 lg:gap-24 xl:gap-32 h-full">
         
-        {/* Left Content (Typography & Social Proof) */}
+        {/* Left Content */}
         <motion.div 
           style={{ y: y2, opacity }}
-          className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left mt-10 lg:mt-0 relative z-20"
+          className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left mt-8 lg:mt-0 relative z-20"
         >
+          {/* Badge */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-nocturnal bg-nocturnal/30 backdrop-blur-md mb-8 mx-auto lg:mx-0"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-nocturnal bg-nocturnal/30 backdrop-blur-md mb-8 mx-auto lg:mx-0 w-fit"
           >
-            <span className="w-2 h-2 rounded-full bg-forsythia shadow-[0_0_8px_#FFC801]" />
-            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">AI-Powered Enterprise Automation</span>
+            <span className="w-2 h-2 rounded-full bg-forsythia shadow-[0_0_8px_#FFC801] animate-pulse" />
+            <span className="text-mystic font-mono text-[11px] uppercase tracking-[0.12em] font-semibold">AI-Powered Enterprise Automation</span>
           </motion.div>
           
+          {/* Hero Heading — 80–96px desktop, 64px tablet, 44px mobile */}
           <motion.h1 
             id="hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-[clamp(52px,5vw,80px)] leading-[0.95] tracking-[-0.03em] font-mono font-bold text-arctic mb-8 max-w-[90%] mx-auto lg:mx-0"
+            transition={{ duration: 0.7, delay: 0.08, ease: [0.165, 0.84, 0.44, 1] }}
+            className="font-sans font-extrabold text-arctic leading-[0.95] tracking-[-0.035em] mb-8
+                       text-[clamp(2.75rem,8vw,6rem)]
+                       lg:text-[clamp(3.5rem,6vw,6rem)]
+                       xl:text-[clamp(4rem,5.5vw,6rem)]
+                       mx-auto lg:mx-0 max-w-[95%] lg:max-w-none"
           >
-            Unlock Autonomous AI <br className="hidden lg:block"/>
-            That <span className="text-transparent bg-clip-text bg-gradient-to-r from-mystic via-arctic to-mystic">Thinks,</span> <br className="hidden lg:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Learns and Automates.</span>
+            Unlock<br />
+            Autonomous AI<br />
+            That Thinks,<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Learns</span> and<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Automates.</span>
           </motion.h1>
 
+          {/* Description — 20px desktop / 18px tablet / 16px mobile */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-[#C8D2DA] text-[18px] font-sans leading-[1.7] max-w-[480px] mx-auto lg:mx-0 mb-8"
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.165, 0.84, 0.44, 1] }}
+            className="text-[#C8D2DA] font-sans leading-[1.7] max-w-[600px] mx-auto lg:mx-0 mb-10
+                       text-[clamp(1rem,1.5vw,1.25rem)]"
           >
-            Empower enterprises with intelligent automation, predictive analytics, autonomous AI agents and real-time decision making through one unified platform.
+            Empower enterprises with intelligent automation, predictive analytics, 
+            autonomous AI agents and real-time decision making through one unified platform.
           </motion.p>
 
+          {/* CTA Buttons — 60px height, 18px font, 18px/36px padding */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: [0.165, 0.84, 0.44, 1] }}
-            className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start mb-24"
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.165, 0.84, 0.44, 1] }}
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-12"
           >
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full font-sans font-bold text-oceanic-noir bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] shadow-[0_0_15px_rgba(0,220,255,0.3)] hover:shadow-[0_4px_20px_rgba(0,220,255,0.5)] hover:-translate-y-[2px] hover:scale-[1.02] hover:brightness-105 transition-all duration-300 ease-out-expo group flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] tracking-wide">
+            <button 
+              className="w-full sm:w-auto px-9 rounded-full font-sans font-semibold text-[18px] text-oceanic-noir 
+                         bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] 
+                         shadow-[0_0_20px_rgba(0,220,255,0.35)] 
+                         hover:shadow-[0_6px_30px_rgba(0,220,255,0.55)] 
+                         hover:-translate-y-[3px] hover:scale-[1.02] hover:brightness-105 
+                         transition-all duration-300 ease-out-expo 
+                         group flex items-center justify-center gap-2.5 
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 
+                         focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] 
+                         h-[60px] tracking-wide"
+            >
               Start Free Trial
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-[4px] transition-transform duration-300 ease-out-expo" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-[5px] transition-transform duration-300 ease-out-expo" />
             </button>
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full font-sans font-bold text-arctic bg-[#08121C]/80 backdrop-blur-md border border-[rgba(0,220,255,0.2)] hover:border-[rgba(0,220,255,0.4)] hover:bg-[rgba(0,220,255,0.05)] hover:-translate-y-[2px] hover:scale-[1.02] hover:shadow-[0_4px_15px_rgba(0,220,255,0.2)] hover:brightness-105 transition-all duration-300 ease-out-expo flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] tracking-wide group">
-              <PlayCircle className="w-4 h-4 text-[#00DCFF] group-hover:scale-105 transition-transform duration-300 ease-out-expo" />
+            <button 
+              className="w-full sm:w-auto px-9 rounded-full font-sans font-semibold text-[18px] text-arctic 
+                         bg-[#040910]/80 backdrop-blur-md 
+                         border border-[rgba(0,220,255,0.2)] 
+                         hover:border-[rgba(0,220,255,0.45)] hover:bg-[rgba(0,220,255,0.05)] 
+                         hover:-translate-y-[3px] hover:scale-[1.02] 
+                         hover:shadow-[0_6px_20px_rgba(0,220,255,0.2)] hover:brightness-105 
+                         transition-all duration-300 ease-out-expo 
+                         flex items-center justify-center gap-2.5 
+                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 
+                         focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] 
+                         h-[60px] tracking-wide group"
+            >
+              <PlayCircle className="w-5 h-5 text-[#00DCFF] group-hover:scale-110 transition-transform duration-300 ease-out-expo" />
               Book a Live Demo
             </button>
           </motion.div>
 
-          {/* Integrated Social Proof */}
+          {/* Trusted Companies — 48px top gap from buttons */}
           <motion.section
             id="clients"
             aria-label="Trusted Companies"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-2xl p-5 md:p-6 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.35),_0_0_40px_rgba(0,220,255,0.05)] relative overflow-hidden max-w-[480px] mx-auto lg:mx-0 bg-[#08121C]/80 backdrop-blur-xl"
+            transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="rounded-2xl px-6 py-5 border border-[rgba(0,220,255,0.1)] 
+                       shadow-[0_12px_40px_rgba(0,0,0,0.35),_0_0_40px_rgba(0,220,255,0.05)] 
+                       relative overflow-hidden max-w-[560px] mx-auto lg:mx-0 
+                       bg-[#040910]/80 backdrop-blur-xl"
           >
-            <h2 className="text-[#C7D2D9]/50 text-[10px] font-mono uppercase tracking-widest font-bold mb-5 relative z-10 text-center lg:text-left">
+            <p className="text-[#C7D2D9]/45 font-mono text-[10px] uppercase tracking-[0.14em] font-semibold mb-4 text-center lg:text-left">
               Trusted by 2,500+ Global Businesses
-            </h2>
-            <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-6 gap-y-4 relative z-10">
+            </p>
+            <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-7 gap-y-4">
+
               {/* Google */}
-              <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-6">
+              <div className="flex items-center gap-2.5 text-[#C7D2D9] opacity-60 hover:opacity-100 hover:text-white hover:scale-[1.06] hover:drop-shadow-[0_0_10px_rgba(0,220,255,0.5)] transition-all duration-200 cursor-pointer">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-[22px] w-auto flex-shrink-0">
                   <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
                 </svg>
-                <span className="font-sans font-medium text-[15px] tracking-tight">Google</span>
+                <span className="font-sans font-medium text-[14px] tracking-tight">Google</span>
               </div>
+
               {/* Microsoft */}
-              <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-5">
+              <div className="flex items-center gap-2.5 text-[#C7D2D9] opacity-60 hover:opacity-100 hover:text-white hover:scale-[1.06] hover:drop-shadow-[0_0_10px_rgba(0,220,255,0.5)] transition-all duration-200 cursor-pointer">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-[22px] w-auto flex-shrink-0">
                   <path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z" />
                 </svg>
-                <span className="font-sans font-medium text-[15px] tracking-tight">Microsoft</span>
+                <span className="font-sans font-medium text-[14px] tracking-tight">Microsoft</span>
               </div>
+
               {/* AWS */}
-              <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-6 mt-0.5">
+              <div className="flex items-center gap-2.5 text-[#C7D2D9] opacity-60 hover:opacity-100 hover:text-white hover:scale-[1.06] hover:drop-shadow-[0_0_10px_rgba(0,220,255,0.5)] transition-all duration-200 cursor-pointer">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-[22px] w-auto flex-shrink-0">
                   <path d="M11.08 15.35c-2.34.82-5.32 1.34-8.1 1.34-1.12 0-2.18-.08-2.98-.18 2.05 1.5 5.06 2.4 8.27 2.4 3.75 0 6.64-1.28 8.62-3.23l-1.32-.93c-1.3 1.25-3.07 1.9-5.18 1.9-.3 0-.62-.02-.92-.04.4-.23.78-.49 1.13-.78l.48-.4zm-2.02-3.14l-1.78-5.35h-1.8l2.76 7.42h1.66l1.7-4.8 1.66 4.8h1.68l2.77-7.42h-1.8l-1.78 5.37-1.72-5.12h-1.55l-1.8 5.1zM5.58 6.86h1.72v7.4h-1.72z" />
                 </svg>
-                <span className="font-sans font-medium text-[15px] tracking-tight">AWS</span>
+                <span className="font-sans font-medium text-[14px] tracking-tight">AWS</span>
               </div>
+
               {/* Oracle */}
-              <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-4 mt-0.5">
+              <div className="flex items-center gap-2.5 text-[#C7D2D9] opacity-60 hover:opacity-100 hover:text-white hover:scale-[1.06] hover:drop-shadow-[0_0_10px_rgba(0,220,255,0.5)] transition-all duration-200 cursor-pointer">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-[20px] w-auto flex-shrink-0">
                   <path d="M16.92 0H7.08C3.17 0 0 3.17 0 7.08v9.84C0 20.83 3.17 24 7.08 24h9.84C20.83 24 24 20.83 24 16.92V7.08C24 3.17 20.83 0 16.92 0zM19.78 16.92c0 1.58-1.28 2.86-2.86 2.86H7.08c-1.58 0-2.86-1.28-2.86-2.86V7.08c0-1.58 1.28-2.86 2.86-2.86h9.84c1.58 0 2.86 1.28 2.86 2.86v9.84z" />
                 </svg>
-                <span className="font-sans font-medium text-[15px] tracking-tight">Oracle</span>
+                <span className="font-sans font-medium text-[14px] tracking-tight">Oracle</span>
               </div>
+
               {/* Salesforce */}
-              <div className="flex items-center gap-2 text-[#C7D2D9] opacity-70 hover:opacity-100 hover:text-white hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,220,255,0.6)] transition-all duration-200 cursor-pointer group">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-auto h-7 -mt-0.5">
+              <div className="flex items-center gap-2.5 text-[#C7D2D9] opacity-60 hover:opacity-100 hover:text-white hover:scale-[1.06] hover:drop-shadow-[0_0_10px_rgba(0,220,255,0.5)] transition-all duration-200 cursor-pointer">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-[24px] w-auto flex-shrink-0">
                   <path d="M17.18 8.04A6.1 6.1 0 0011.23 2c-2.9 0-5.32 1.98-6 4.67C2.26 6.94 0 9.38 0 12.3c0 3.03 2.5 5.51 5.55 5.51h12.56c3.25 0 5.89-2.6 5.89-5.81 0-2.99-2.22-5.46-5.06-5.78a5.1 5.1 0 00-1.76-2.18z" />
                 </svg>
-                <span className="font-sans font-medium text-[15px] tracking-tight">Salesforce</span>
+                <span className="font-sans font-medium text-[14px] tracking-tight">Salesforce</span>
               </div>
             </div>
           </motion.section>

@@ -67,24 +67,25 @@ export function Testimonials() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
           >
-            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">Social Proof</span>
+            <span className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold">Social Proof</span>
           </motion.div>
           <motion.h2
             id="testimonials-heading"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-6"
+            transition={{ duration: 0.6 }}
+            className="text-heading-1 font-sans font-bold text-arctic mb-5"
           >
-            What Enterprise Leaders Say
+            What Enterprise <br className="hidden sm:block" />
+            <span className="highlight-shimmer">Leaders Say</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-mystic/80 font-sans text-fluid-body max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-mystic/70 font-sans text-body-lg max-w-prose-wide mx-auto"
           >
             Discover how organizations worldwide are transforming operations through AI-powered automation.
           </motion.p>
@@ -115,7 +116,7 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-arctic/90 font-sans text-lg leading-relaxed flex-1 mb-12 relative z-10">
+                <p className="text-arctic/90 font-sans text-body-lg leading-relaxed flex-1 mb-10 relative z-10">
                   "{test.quote}"
                 </p>
                 

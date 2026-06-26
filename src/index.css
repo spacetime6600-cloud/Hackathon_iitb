@@ -29,9 +29,39 @@
     background-color: rgba(0, 238, 255, 0.25);
     color: #00EEFF;
   }
+
+  /* Consistent heading base */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
 }
 
 @layer components {
+  /* Shimmer animation for highlighted gradient words */
+  @keyframes text-shimmer {
+    0%, 80% { background-position: 0% 50%; }
+    90% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .highlight-shimmer {
+    background: linear-gradient(90deg, #FFC801 0%, #FF9932 40%, #FFE066 60%, #FFC801 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 8s ease infinite;
+  }
+
+  .highlight-cyan-shimmer {
+    background: linear-gradient(90deg, #00DCFF 0%, #9AECFF 40%, #00DCFF 60%, #00B4FF 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 8s ease 2s infinite;
+  }
+
   .liquid-glass {
     background: rgba(17, 76, 90, 0.2);
     background-blend-mode: luminosity;

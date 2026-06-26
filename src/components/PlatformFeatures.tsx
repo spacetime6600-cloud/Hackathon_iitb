@@ -77,13 +77,13 @@ function FeatureCard({ feature, index }: { feature: any, index: number }) {
             {feature.icon}
           </div>
           <div>
-            <div className="inline-block px-2.5 py-1 bg-[#08121C]/80 border border-[rgba(0,220,255,0.1)] rounded-md text-[10px] font-mono text-mystic/80 uppercase tracking-widest mb-1 shadow-sm group-hover:border-[rgba(0,220,255,0.3)] transition-colors">
-              {feature.label}
-            </div>
-            <h3 className="text-xl text-arctic font-sans font-bold tracking-tight">{feature.title}</h3>
+              <div className="font-mono text-label text-mystic/80 uppercase tracking-[0.1em] mb-2 bg-[#08121C]/80 border border-[rgba(0,220,255,0.1)] rounded-md px-2.5 py-1 w-fit shadow-sm group-hover:border-[rgba(0,220,255,0.3)] transition-colors">
+                {feature.label}
+              </div>
+          <h3 className="text-heading-2 font-sans font-semibold text-arctic tracking-tight">{feature.title}</h3>
           </div>
         </div>
-        <p className="text-mystic/70 font-sans leading-relaxed text-sm max-w-sm">
+        <p className="text-mystic/70 font-sans text-body-lg leading-relaxed max-w-prose-narrow">
           {feature.description}
         </p>
       </div>
@@ -326,24 +326,24 @@ export function PlatformFeatures() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
           >
-            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">Platform Capabilities</span>
+            <span className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold">Platform Capabilities</span>
           </motion.div>
           <motion.h2 
             id="features-heading"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-6"
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
+            className="text-heading-1 font-sans font-bold text-arctic mb-5"
           >
-            Engineered for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00EEFF] to-mystic">Scale.</span>
+            Engineered for <span className="highlight-shimmer">Scale.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-mystic/80 font-sans text-fluid-body leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
+            className="text-mystic/70 font-sans text-body-lg max-w-prose-wide leading-relaxed"
           >
             A unified architecture combining predictive analytics, autonomous agents, and real-time data processing into one beautiful interface.
           </motion.p>
