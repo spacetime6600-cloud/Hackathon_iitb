@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#040910" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- SEO Metadata -->
+    <title>NexusAI — Enterprise Autonomous AI Platform</title>
+    <meta name="description" content="Enterprise AI platform for autonomous automation, predictive analytics, intelligent workflows and scalable AI infrastructure." />
+    <meta name="keywords" content="AI, Enterprise AI, Automation, Machine Learning, Predictive Analytics, Business Intelligence, Cloud AI, Workflow Automation" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.nexusai.example.com/" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nexusai.example.com/" />
+    <meta property="og:title" content="NexusAI — Enterprise Autonomous AI Platform" />
+    <meta property="og:description" content="Enterprise AI platform for autonomous automation, predictive analytics, intelligent workflows and scalable AI infrastructure." />
+    <meta property="og:image" content="https://www.nexusai.example.com/og-image.jpg" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NexusAI — Enterprise Autonomous AI Platform" />
+    <meta name="twitter:description" content="Enterprise AI platform for autonomous automation, predictive analytics, intelligent workflows and scalable AI infrastructure." />
+    <meta name="twitter:image" content="https://www.nexusai.example.com/twitter-image.jpg" />
+
+    <!-- Preloads for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+      /* Ultra-fast (<500ms) inline non-blocking loader */
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background-color: #040910;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out, filter 0.4s ease-out;
+        pointer-events: none;
+      }
+      .loader-hidden {
+        opacity: 0;
+        transform: scale(1.05);
+        filter: blur(10px);
+      }
+      .loader-spinner {
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgba(0, 238, 255, 0.1);
+        border-top-color: #00EEFF;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="initial-loader">
+      <div class="loader-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Remove loader instantly when the main thread is ready
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.classList.add('loader-hidden');
+          setTimeout(() => loader.remove(), 400); // Remove from DOM after transition
+        }
+      });
+    </script>
+  </body>
+</html>
