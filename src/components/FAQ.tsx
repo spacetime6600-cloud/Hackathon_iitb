@@ -39,16 +39,34 @@ export function FAQ() {
       <div className="max-w-4xl mx-auto relative z-10">
         
         <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
+          >
+            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">Common Questions</span>
+          </motion.div>
           <motion.h2
             id="faq-heading"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight"
+            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-6"
           >
             Frequently Asked Questions
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
+            className="text-mystic/70 font-sans text-fluid-body max-w-xl mx-auto"
+          >
+            Everything you need to know about deploying NexusAI across your organization.
+          </motion.p>
         </div>
 
         <div className="space-y-4">
@@ -88,7 +106,7 @@ export function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.4, ease: [0.645, 0.045, 0.355, 1] }}
                   >
-                    <div className="px-8 pb-8 pt-0 text-mystic/80 font-sans text-lg leading-relaxed border-t border-[rgba(0,220,255,0.1)] mt-2 pt-6">
+                    <div className="px-8 pb-8 text-mystic/80 font-sans text-lg leading-relaxed border-t border-[rgba(0,220,255,0.1)] pt-6">
                       {faq.answer}
                     </div>
                   </motion.div>

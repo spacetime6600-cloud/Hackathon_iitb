@@ -1,8 +1,10 @@
 
 import { BrainCircuit, Globe, Mail, MessageSquare, ArrowRight } from 'lucide-react';
 
+// Computed once at module level — not on every render
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-oceanic-noir border-t border-nocturnal/30 relative overflow-hidden">
@@ -22,17 +24,27 @@ export function Footer() {
             {/* Newsletter */}
             <div className="max-w-md">
               <h4 className="text-arctic font-mono font-bold text-xs mb-4 uppercase tracking-widest">Subscribe to Insights</h4>
-              <div className="relative flex items-center">
+              <form
+                onSubmit={(e) => { e.preventDefault(); }}
+                className="relative flex items-center"
+                aria-label="Newsletter subscription form"
+              >
                 <input 
                   type="email" 
+                  name="email"
+                  required
                   aria-label="Email address for newsletter"
                   placeholder="Enter your enterprise email" 
                   className="w-full bg-[#08121C]/60 backdrop-blur-md border border-[rgba(0,220,255,0.1)] rounded-full py-3 pl-5 pr-12 text-sm text-arctic placeholder:text-mystic/40 focus:outline-none focus:ring-2 focus:ring-[#00EEFF]/50 transition-colors shadow-inner"
                 />
-                <button aria-label="Subscribe" className="absolute right-2 w-8 h-8 rounded-full bg-[#00EEFF] flex items-center justify-center text-[#08121C] hover:bg-[#00EEFF]/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-oceanic-noir focus:ring-[#00EEFF]">
+                <button
+                  type="submit"
+                  aria-label="Subscribe to newsletter"
+                  className="absolute right-2 w-8 h-8 rounded-full bg-[#00EEFF] flex items-center justify-center text-[#08121C] hover:bg-[#00EEFF]/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-oceanic-noir focus:ring-[#00EEFF]"
+                >
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </button>
-              </div>
+              </form>
             </div>
           </div>
 
@@ -74,7 +86,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-nocturnal flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-mystic/50 font-sans text-sm">
-            © {currentYear} NexusAI Enterprise Inc. All rights reserved.
+            © {CURRENT_YEAR} NexusAI Enterprise Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {[Globe, MessageSquare, Mail].map((Icon, idx) => {

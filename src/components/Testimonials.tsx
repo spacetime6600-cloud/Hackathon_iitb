@@ -57,16 +57,25 @@ export function Testimonials() {
         }
       `}</style>
 
-      <div className="max-w-[100vw] mx-auto relative z-10">
+      <div className="mx-auto relative z-10 max-w-full overflow-hidden">
         
-        <div className="text-center mb-24">
+        <div className="text-center mb-20 px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
+          >
+            <span className="text-mystic text-xs font-mono uppercase tracking-widest font-semibold">Social Proof</span>
+          </motion.div>
           <motion.h2
             id="testimonials-heading"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl text-arctic font-mono font-bold tracking-tight mb-6"
+            className="text-fluid-h2 text-arctic font-mono font-bold tracking-tight mb-6"
           >
             What Enterprise Leaders Say
           </motion.h2>
@@ -75,7 +84,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-mystic/80 font-sans text-lg max-w-2xl mx-auto"
+            className="text-mystic/80 font-sans text-fluid-body max-w-2xl mx-auto"
           >
             Discover how organizations worldwide are transforming operations through AI-powered automation.
           </motion.p>

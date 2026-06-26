@@ -376,7 +376,8 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20 pointer-events-none"
+        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-4 z-20 pointer-events-none"
+        aria-hidden="true"
       >
         <span className="text-mystic/50 font-mono text-[10px] uppercase tracking-widest font-bold">Scroll to Explore</span>
         <div className="w-px h-12 bg-gradient-to-b from-mystic/30 to-transparent relative overflow-hidden">

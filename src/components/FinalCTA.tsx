@@ -1,40 +1,45 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 
+// Pre-computed particle data — avoids Math.random() in render (causes jitter/hydration issues)
+const CTA_PARTICLES = [
+  { w: '120px', h: '120px', left: '10%',  top: '15%',  duration: 8,  delay: 0   },
+  { w: '80px',  h: '80px',  left: '75%',  top: '10%',  duration: 10, delay: 0.5 },
+  { w: '100px', h: '100px', left: '30%',  top: '70%',  duration: 12, delay: 1   },
+  { w: '60px',  h: '60px',  left: '85%',  top: '60%',  duration: 9,  delay: 1.5 },
+  { w: '140px', h: '140px', left: '50%',  top: '30%',  duration: 14, delay: 2   },
+  { w: '70px',  h: '70px',  left: '5%',   top: '80%',  duration: 11, delay: 2.5 },
+];
+
 export function FinalCTA() {
   return (
     <section id="contact" aria-labelledby="cta-heading" className="relative bg-oceanic-noir py-32 md:py-48 px-6 overflow-hidden border-y border-nocturnal/30">
       
       {/* Animated AI Background */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* Core glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(0,220,255,0.04)_0%,_transparent_70%)] blur-[120px]" />
         
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#114C5A15_1px,transparent_1px),linear-gradient(to_bottom,#114C5A15_1px,transparent_1px)] bg-[size:40px_40px]" />
         
-        {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
+        {/* Floating particles — static positions to avoid re-render jitter */}
+        {CTA_PARTICLES.map((p, i) => (
           <motion.div
             key={i}
             animate={{ 
               y: [-20, 20, -20],
               x: [-10, 10, -10],
-              opacity: [0.2, 0.6, 0.2]
+              opacity: [0.1, 0.4, 0.1]
             }}
             transition={{ 
-              duration: 8 + i * 2, 
+              duration: p.duration, 
               repeat: Infinity, 
               ease: "easeInOut",
-              delay: i * 0.5
+              delay: p.delay
             }}
-            className="absolute rounded-full bg-[#00EEFF]/20 blur-xl"
-            style={{
-              width: `${Math.random() * 100 + 50}px`,
-              height: `${Math.random() * 100 + 50}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+            className="absolute rounded-full bg-[#00EEFF]/10 blur-xl"
+            style={{ width: p.w, height: p.h, left: p.left, top: p.top }}
           />
         ))}
       </div>

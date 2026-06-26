@@ -182,7 +182,7 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto">
         
         {/* Header & Controls */}
-        <div className="flex flex-col items-center text-center mb-36 relative z-50">
+        <div className="flex flex-col items-center text-center mb-20 relative z-50">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

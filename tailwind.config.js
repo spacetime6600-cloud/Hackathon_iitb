@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'oceanic-noir': '#172B36',
+        'oceanic-noir': '#040910',
+        'oceanic-mid': '#172B36',
         'nocturnal': '#114C5A',
         'forsythia': '#FFC801',
         'saffron': '#FF9932',
