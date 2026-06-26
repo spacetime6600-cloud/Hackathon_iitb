@@ -41,17 +41,17 @@ function AnimatedKPICard({ card, idx }: any) {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.5 + card.delay, type: "spring" }}
-      className={`absolute ${card.pos} z-30`}
+      className={`${card.pos} z-30`}
     >
       <motion.div
         animate={{ y: [-4, 4, -4] }}
         transition={{ duration: 4 + (idx % 3), repeat: Infinity, ease: "easeInOut" }}
-        className="rounded-xl p-4 border border-[rgba(0,220,255,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.4),_0_0_15px_rgba(0,220,255,0.05)] flex flex-col gap-2 min-w-[160px] bg-[rgba(8,20,30,0.6)] backdrop-blur-xl relative overflow-hidden"
+        className="rounded-xl p-3 lg:p-4 border border-[rgba(0,220,255,0.15)] shadow-[0_8px_32px_rgba(0,0,0,0.4),_0_0_15px_rgba(0,220,255,0.05)] flex flex-col gap-1.5 lg:gap-2 min-w-[140px] lg:min-w-[160px] bg-[rgba(8,20,30,0.6)] backdrop-blur-xl relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,220,255,0.1)_0%,_transparent_70%)] pointer-events-none -z-10" />
-        <div className="text-mystic/60 font-sans text-xs font-medium relative z-10">{card.title}</div>
-        <div className="flex items-end justify-between gap-4 relative z-10">
-          <div className="text-arctic font-mono font-bold text-2xl tracking-tight">
+        <div className="text-mystic/60 font-sans text-[10px] lg:text-xs font-medium relative z-10">{card.title}</div>
+        <div className="flex items-end justify-between gap-2 lg:gap-4 relative z-10">
+          <div className="text-arctic font-mono font-bold text-xl lg:text-2xl tracking-tight">
              <AnimatedCounter value={card.value} />
           </div>
           <div className="flex flex-col items-end gap-1">
@@ -82,23 +82,32 @@ function AnimatedKPICard({ card, idx }: any) {
 export function HeroSection() {
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, -100]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const y1 = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : 200]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, isMobile ? 0 : -100]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   // Floating KPI Data
   const kpiCards = [
-    { title: "AI Agents Active", value: "128", metric: "+ 24%", pos: "top-[10%] left-[10%]", delay: 0 },
-    { title: "Tasks Automated", value: "8.42M+", metric: "+ 18%", pos: "top-[15%] right-[5%]", delay: 0.2 },
-    { title: "Decision Speed", value: "142ms", metric: "+ 12%", pos: "top-[50%] right-[2%]", delay: 0.4 },
-    { title: "Accuracy Rate", value: "99.8%", metric: "+ 0.6%", pos: "top-[55%] left-[5%]", delay: 0.6 },
-    { title: "System Uptime", value: "99.99%", metric: "+ 0.01%", pos: "bottom-[15%] right-[10%]", delay: 0.8 }
+    { title: "AI Agents Active", value: "128", metric: "+ 24%", pos: "relative lg:absolute w-[47%] sm:w-[45%] lg:w-auto lg:top-[10%] lg:left-[10%]", delay: 0 },
+    { title: "Tasks Automated", value: "8.42M+", metric: "+ 18%", pos: "relative lg:absolute w-[47%] sm:w-[45%] lg:w-auto lg:top-[15%] lg:right-[5%]", delay: 0.2 },
+    { title: "Decision Speed", value: "142ms", metric: "+ 12%", pos: "relative lg:absolute w-[47%] sm:w-[45%] lg:w-auto lg:top-[50%] lg:right-[2%]", delay: 0.4 },
+    { title: "Accuracy Rate", value: "99.8%", metric: "+ 0.6%", pos: "relative lg:absolute w-[47%] sm:w-[45%] lg:w-auto lg:top-[55%] lg:left-[5%]", delay: 0.6 },
+    { title: "System Uptime", value: "99.99%", metric: "+ 0.01%", pos: "relative lg:absolute w-[100%] sm:w-[45%] lg:w-auto lg:bottom-[15%] lg:right-[10%]", delay: 0.8 }
   ];
 
   return (
     <section id="hero" aria-labelledby="hero-heading" ref={containerRef} className="relative min-h-screen bg-oceanic-noir overflow-hidden flex flex-col font-sans">
       {/* Hero Content */}
-      <div className="flex-1 max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center pt-32 lg:pt-40 pb-32 relative z-10 gap-16 lg:gap-24 xl:gap-32 h-full">
+      <div className="flex-1 max-w-[1600px] w-full mx-auto px-4 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center pt-28 lg:pt-40 pb-24 lg:pb-32 relative z-10 gap-12 lg:gap-24 xl:gap-32 h-full">
         
         {/* Left Content */}
         <motion.div 
@@ -116,13 +125,13 @@ export function HeroSection() {
             <span className="text-mystic font-mono text-label uppercase font-semibold">AI-Powered Enterprise Automation</span>
           </motion.div>
           
-          {/* Hero Heading — 80–96px desktop, 64px tablet, 44px mobile */}
+          {/* Hero Heading — 80–96px desktop, 64px tablet, 48-56px mobile */}
           <motion.h1 
             id="hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08, ease: [0.165, 0.84, 0.44, 1] }}
-            className="font-sans font-extrabold text-arctic leading-[0.95] mb-8 max-w-[95%] lg:max-w-none text-display mx-auto lg:mx-0"
+            className="font-sans font-extrabold text-arctic leading-[0.95] mb-6 lg:mb-8 max-w-[95%] lg:max-w-none text-[48px] md:text-[56px] lg:text-[80px] xl:text-[96px] mx-auto lg:mx-0"
           >
             Unlock<br />
             Autonomous AI<br />
@@ -131,12 +140,12 @@ export function HeroSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Automates.</span>
           </motion.h1>
 
-          {/* Description — 20px desktop / 18px tablet / 16px mobile */}
+          {/* Description — 20px desktop / 16px mobile */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg max-w-[600px] mx-auto lg:mx-0 mb-10"
+            className="text-[rgba(244,246,244,0.72)] font-sans text-[16px] lg:text-[20px] max-w-[600px] mx-auto lg:mx-0 mb-8 lg:mb-10"
           >
             Empower enterprises with intelligent automation, predictive analytics, 
             autonomous AI agents and real-time decision making through one unified platform.
@@ -235,20 +244,23 @@ export function HeroSection() {
         {/* Right Visualization (Highly Complex SVG Core & KPI Cards) */}
         <motion.div 
           style={{ y: y1 }}
-          className="w-full lg:w-1/2 relative h-[600px] lg:h-[800px] flex items-center justify-center lg:translate-x-8"
+          className="w-full lg:w-1/2 relative flex flex-row flex-wrap lg:block items-center justify-center lg:translate-x-8 gap-3"
         >
-          {/* Ambient Core Glow */}
-          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(0,220,255,0.08)_0%,_transparent_50%)] blur-[60px] pointer-events-none mix-blend-screen" />
-          <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,200,1,0.05)_0%,_transparent_50%)] blur-[40px] pointer-events-none mix-blend-screen" />
+          {/* AI Core Wrapper */}
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-full lg:h-[800px] lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 flex items-center justify-center mx-auto mb-6 lg:mb-0 shrink-0">
+             
+            {/* Ambient Core Glow */}
+            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(0,220,255,0.08)_0%,_transparent_50%)] blur-[40px] lg:blur-[60px] pointer-events-none mix-blend-screen" />
+            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(255,200,1,0.05)_0%,_transparent_50%)] blur-[30px] lg:blur-[40px] pointer-events-none mix-blend-screen" />
 
-          {/* SVG Neural Network Base */}
-          <motion.div 
-            style={{ 
-              maskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)'
-            }}
-            className="absolute inset-0 pointer-events-none flex items-center justify-center scale-110 origin-center"
-          >
+            {/* SVG Neural Network Base */}
+            <motion.div 
+              style={{ 
+                maskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)',
+                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%)'
+              }}
+              className="absolute inset-0 pointer-events-none flex items-center justify-center lg:scale-110 origin-center"
+            >
             <svg viewBox="0 0 1000 1000" className="w-[150%] h-[150%] -translate-y-[5%]" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <linearGradient id="neural-line" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -386,9 +398,10 @@ export function HeroSection() {
               </g>
             </svg>
           </motion.div>
+          </div>
 
           {/* Floating KPI Cards (Absolute Positioned around Core) */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none -translate-y-[10%]">
+          <div className="relative lg:absolute lg:inset-0 w-full lg:h-full flex flex-row flex-wrap justify-center gap-3 lg:block mt-4 lg:mt-0 z-30">
             {kpiCards.map((card, idx) => (
               <AnimatedKPICard key={idx} card={card} idx={idx} />
             ))}
