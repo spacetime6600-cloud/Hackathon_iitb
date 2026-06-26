@@ -96,7 +96,7 @@ export function FinalCTA() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-[4px] transition-transform duration-300 ease-out-expo" aria-hidden="true" />
           </motion.button>
           
-          <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#08121C]/80 backdrop-blur-md text-arctic font-sans font-bold text-lg flex items-center justify-center gap-2 border border-[rgba(0,220,255,0.2)] hover:border-[rgba(0,220,255,0.4)] hover:bg-[rgba(0,220,255,0.05)] transition-all duration-300 ease-out-expo hover:-translate-y-[2px] hover:scale-[1.02] hover:shadow-[0_4px_15px_rgba(0,220,255,0.2)] hover:brightness-105 tracking-wide group">
+          <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#08121C]/80 backdrop-blur-md text-arctic font-sans font-bold text-lg flex items-center justify-center gap-2 border border-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.05)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-[2px] hover:scale-[1.02] hover:shadow-lg hover:brightness-105 tracking-wide group">
             <PlayCircle className="w-5 h-5 text-[#00DCFF] group-hover:scale-105 transition-transform duration-300 ease-out-expo" aria-hidden="true" />
             Book a Live Demo
           </button>

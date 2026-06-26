@@ -92,14 +92,13 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <button
             aria-label="Book a Demo"
-            className="px-5 py-2 text-sm font-sans font-medium text-arctic border border-[rgba(0,220,255,0.2)] rounded-full hover:border-[rgba(0,220,255,0.4)] hover:bg-[rgba(0,220,255,0.08)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00DCFF]/50"
+            className="px-5 py-2 text-sm font-sans font-medium text-arctic border border-[rgba(255,255,255,0.1)] rounded-full hover:border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.05)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00DCFF]/50"
           >
             Book Demo
           </button>
-          <button
-            aria-label="Start Free Trial"
-            className="px-5 py-2 text-sm font-sans font-bold text-oceanic-noir bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] rounded-full shadow-[0_0_15px_rgba(0,220,255,0.3)] hover:shadow-[0_0_25px_rgba(0,220,255,0.5)] hover:-translate-y-0.5 hover:brightness-110 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00DCFF]/50 active:translate-y-0"
-          >
+          <button 
+            className="px-5 py-2 text-sm font-sans font-bold text-oceanic-noir bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] rounded-full shadow-md hover:shadow-lg hover:-translate-y-[2px] hover:brightness-110 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00DCFF]/50 active:translate-y-0"
+            >
             Start Free Trial
           </button>
         </div>

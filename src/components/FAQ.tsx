@@ -78,7 +78,7 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.165, 0.84, 0.44, 1] }}
-              className="border border-[rgba(0,220,255,0.1)] rounded-[24px] overflow-hidden bg-oceanic-noir/40 backdrop-blur-xl hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[2px] transition-all duration-300 shadow-lg"
+              className="border border-[rgba(255,255,255,0.05)] rounded-[24px] overflow-hidden bg-oceanic-noir/40 backdrop-blur-xl hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-lg hover:shadow-2xl"
             >
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}

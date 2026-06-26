@@ -105,7 +105,7 @@ export function Testimonials() {
             {duplicatedTestimonials.map((test, idx) => (
               <article
                 key={idx}
-                className="w-[350px] md:w-[450px] shrink-0 bg-oceanic-noir/40 backdrop-blur-xl rounded-[32px] p-10 border border-[rgba(0,220,255,0.1)] hover:border-[rgba(0,220,255,0.3)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] transition-all duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] group cursor-default flex flex-col relative overflow-hidden hover:-translate-y-[6px] hover:scale-[1.015]"
+                className="w-[350px] md:w-[450px] shrink-0 bg-oceanic-noir/40 backdrop-blur-xl rounded-[24px] p-10 border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:shadow-2xl transition-all duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)] group cursor-default flex flex-col relative overflow-hidden hover:-translate-y-[2px] hover:scale-[1.01]"
               >
                 {/* Shine Sweep Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-mystic/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay" />
@@ -120,16 +120,16 @@ export function Testimonials() {
                   "{test.quote}"
                 </p>
                 
-                <div className="flex items-center gap-4 relative z-10 border-t border-[rgba(0,220,255,0.1)] pt-6 mt-auto">
-                  <div className="w-14 h-14 rounded-full bg-[#08121C] border border-[rgba(0,220,255,0.15)] flex items-center justify-center overflow-hidden group-hover:border-[rgba(0,220,255,0.4)] transition-colors shadow-inner">
-                    <span className="text-arctic font-mono text-xl font-bold group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center gap-4 relative z-10 border-t border-[rgba(255,255,255,0.05)] pt-6 mt-auto">
+                  <div className="w-14 h-14 rounded-full bg-[#08121C] border border-[rgba(255,255,255,0.08)] flex items-center justify-center overflow-hidden group-hover:border-[rgba(255,255,255,0.15)] transition-colors shadow-inner">
+                    <span className="text-arctic font-mono text-xl font-bold group-hover:scale-110 transition-transform duration-500">
                       {test.avatar}
                     </span>
                   </div>
                   <div>
                     <div className="text-arctic font-sans font-bold tracking-tight">{test.name}</div>
-                    <div className="text-mystic/80 font-sans text-sm">{test.title}</div>
-                    <div className="text-[#00EEFF]/80 font-mono text-xs mt-1 uppercase tracking-widest">{test.company}</div>
+                    <div className="text-[rgba(244,246,244,0.72)] font-sans text-sm">{test.title}</div>
+                    <div className="text-mystic/70 font-mono text-label mt-1">{test.company}</div>
                   </div>
                 </div>
               </article>

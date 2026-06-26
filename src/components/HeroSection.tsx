@@ -152,10 +152,9 @@ export function HeroSection() {
             <button 
               className="w-full sm:w-auto px-9 rounded-full font-sans font-semibold text-[18px] text-oceanic-noir 
                          bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] 
-                         shadow-[0_0_20px_rgba(0,220,255,0.35)] 
-                         hover:shadow-[0_6px_30px_rgba(0,220,255,0.55)] 
-                         hover:-translate-y-[3px] hover:scale-[1.02] hover:brightness-105 
-                         transition-all duration-300 ease-out-expo 
+                         shadow-md hover:shadow-lg 
+                         hover:-translate-y-[2px] hover:scale-[1.02] hover:brightness-105 
+                         transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] 
                          group flex items-center justify-center gap-2.5 
                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 
                          focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] 
@@ -165,17 +164,7 @@ export function HeroSection() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-[5px] transition-transform duration-300 ease-out-expo" />
             </button>
             <button 
-              className="w-full sm:w-auto px-9 rounded-full font-sans font-semibold text-[18px] text-arctic 
-                         bg-[#040910]/80 backdrop-blur-md 
-                         border border-[rgba(0,220,255,0.2)] 
-                         hover:border-[rgba(0,220,255,0.45)] hover:bg-[rgba(0,220,255,0.05)] 
-                         hover:-translate-y-[3px] hover:scale-[1.02] 
-                         hover:shadow-[0_6px_20px_rgba(0,220,255,0.2)] hover:brightness-105 
-                         transition-all duration-300 ease-out-expo 
-                         flex items-center justify-center gap-2.5 
-                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 
-                         focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] 
-                         h-[60px] tracking-wide group"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#040910]/80 text-arctic font-sans font-semibold text-lg flex items-center justify-center gap-2 border border-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.05)] hover:shadow-lg transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-[2px] hover:scale-[1.02] active:scale-95 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00DCFF]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-oceanic-noir tracking-wide"
             >
               <PlayCircle className="w-5 h-5 text-[#00DCFF] group-hover:scale-110 transition-transform duration-300 ease-out-expo" />
               Book a Live Demo

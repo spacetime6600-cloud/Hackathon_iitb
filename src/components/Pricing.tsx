@@ -40,10 +40,10 @@ function PricingCard({ plan, getPrice, activeCurrency, index }: { plan: any, get
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.165, 0.84, 0.44, 1] }}
-      className={`relative rounded-[24px] p-8 md:p-10 transition-all duration-300 ease-out-expo group flex flex-col bg-oceanic-noir/40 backdrop-blur-xl hover:-translate-y-[4px] hover:scale-[1.01] ${
+      className={`relative rounded-[24px] p-8 md:p-10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group flex flex-col bg-oceanic-noir/40 backdrop-blur-xl hover:-translate-y-[2px] hover:scale-[1.01] ${
         plan.isPopular 
-          ? 'md:-translate-y-[6px] z-20 border border-[rgba(0,220,255,0.25)] shadow-[0_20px_60px_rgba(0,0,0,0.5),_0_0_50px_rgba(0,220,255,0.1),_0_0_100px_rgba(0,220,255,0.08)] hover:border-[rgba(0,220,255,0.4)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.6),_0_0_50px_rgba(0,220,255,0.15),_0_0_100px_rgba(0,220,255,0.15)]' 
-          : 'z-10 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.35),_0_0_40px_rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)]'
+          ? 'md:-translate-y-[4px] z-20 border border-[rgba(255,255,255,0.12)] shadow-[0_20px_60px_rgba(0,0,0,0.5)] hover:border-[rgba(255,255,255,0.2)] hover:shadow-2xl' 
+          : 'z-10 border border-[rgba(255,255,255,0.05)] shadow-xl hover:border-[rgba(255,255,255,0.08)] hover:shadow-2xl'
       }`}
     >
       {/* Natural Lighting Layers */}
@@ -117,8 +117,8 @@ function PricingCard({ plan, getPrice, activeCurrency, index }: { plan: any, get
 
         <button className={`w-full py-4 rounded-full font-sans font-bold text-sm transition-all duration-300 ease-out-expo relative z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-oceanic-noir focus-visible:ring-[#00DCFF] flex items-center justify-center gap-2 group/btn hover:-translate-y-[2px] hover:scale-[1.02] hover:brightness-105 ${
           plan.isPopular 
-            ? 'bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] text-oceanic-noir shadow-[0_0_15px_rgba(0,220,255,0.3)] hover:shadow-[0_4px_20px_rgba(0,220,255,0.5)]' 
-            : 'bg-[#08121C]/80 backdrop-blur-md text-arctic border border-[rgba(0,220,255,0.2)] hover:border-[rgba(0,220,255,0.4)] hover:bg-[rgba(0,220,255,0.05)] hover:shadow-[0_4px_15px_rgba(0,220,255,0.2)]'
+            ? 'bg-gradient-to-r from-[#00DCFF] to-[#00B4FF] text-oceanic-noir shadow-md hover:shadow-lg' 
+            : 'bg-[#08121C]/80 backdrop-blur-md text-arctic border border-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.05)] hover:shadow-lg'
         }`}>
           {plan.name === "Enterprise" ? "Contact Sales" : "Start Free Trial"}
         </button>

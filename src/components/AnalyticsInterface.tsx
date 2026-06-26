@@ -109,7 +109,7 @@ export function AnalyticsInterface() {
           </div>
 
           {/* Left Column: Premium Enterprise Dashboard */}
-          <article className="rounded-[24px] p-8 md:p-12 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.05)] relative overflow-hidden h-full flex flex-col gap-8 z-10 bg-oceanic-noir/40 backdrop-blur-xl">
+          <article className="rounded-[24px] p-8 md:p-12 border border-[rgba(255,255,255,0.05)] shadow-2xl relative overflow-hidden h-full flex flex-col gap-8 z-10 bg-oceanic-noir/40 backdrop-blur-xl">
              <div className="flex justify-between items-center relative z-10">
                <div className="flex items-center gap-4">
                  <div className="w-12 h-12 rounded-2xl bg-[#08121C] border border-[rgba(0,220,255,0.15)] flex items-center justify-center shadow-lg">
@@ -128,14 +128,14 @@ export function AnalyticsInterface() {
 
              {/* Top KPI Row */}
              <div className="grid grid-cols-2 gap-6 relative z-10">
-                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] group shadow-inner">
+                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl group shadow-inner">
                   <div className="text-heading-3 font-sans font-bold text-arctic mb-2">AI Accuracy</div>
                   <div className="text-arctic font-mono text-3xl font-bold">
                     <Counter from={0} to={99.8} duration={2} decimals={1} />
                     <span className="text-lg text-mystic">%</span>
                   </div>
                 </div>
-                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] group shadow-inner">
+                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl group shadow-inner">
                   <div className="text-heading-3 font-sans font-bold text-arctic mb-2">System Uptime</div>
                   <div className="text-arctic font-mono text-3xl font-bold">
                     <Counter from={0} to={99.99} duration={2.5} decimals={2} />
@@ -182,7 +182,7 @@ export function AnalyticsInterface() {
 
              {/* Bottom KPIs */}
              <div className="grid grid-cols-2 gap-6 relative z-10 flex-1">
-                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] flex flex-col justify-between shadow-inner group">
+                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl flex flex-col justify-between shadow-inner group">
                    <div className="text-heading-3 font-sans font-bold text-arctic mb-3">Tasks Automated</div>
                    <div className="flex items-center gap-2">
                      <GitMerge className="w-5 h-5 text-[#00EEFF]/50" />
@@ -192,7 +192,7 @@ export function AnalyticsInterface() {
                      </div>
                    </div>
                 </div>
-                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] flex flex-col justify-between shadow-inner group">
+                <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl flex flex-col justify-between shadow-inner group">
                    <div className="text-heading-3 font-sans font-bold text-arctic mb-3">Live AI Decisions</div>
                    <div className="flex items-center gap-2">
                      <Cpu className="w-5 h-5 text-[#FFC801]/70" />
@@ -206,7 +206,7 @@ export function AnalyticsInterface() {
           </article>
 
           {/* Right Column: Premium Workflow Visualization */}
-          <article className="rounded-[24px] p-10 md:p-14 border border-[rgba(0,220,255,0.1)] shadow-[0_12px_40px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.05)] relative overflow-hidden h-full flex items-center justify-center min-h-[500px] bg-oceanic-noir/40 backdrop-blur-xl">
+          <article className="rounded-[24px] p-10 md:p-14 border border-[rgba(255,255,255,0.05)] shadow-2xl relative overflow-hidden h-full flex items-center justify-center min-h-[500px] bg-oceanic-noir/40 backdrop-blur-xl">
              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,220,255,0.05)_0%,_transparent_70%)] pointer-events-none" />
              
              <div className="relative w-full max-w-sm mx-auto flex flex-col items-center">

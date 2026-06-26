@@ -23,7 +23,7 @@ export function Footer() {
             
             {/* Newsletter */}
             <div className="max-w-md">
-              <h4 className="text-arctic font-mono font-bold text-xs mb-4 uppercase tracking-widest">Subscribe to Insights</h4>
+              <h4 className="text-mystic/80 font-mono text-label mb-4 uppercase">Subscribe to Insights</h4>
               <form
                 onSubmit={(e) => { e.preventDefault(); }}
                 className="relative flex items-center"
@@ -35,12 +35,12 @@ export function Footer() {
                   required
                   aria-label="Email address for newsletter"
                   placeholder="Enter your enterprise email" 
-                  className="w-full bg-[#08121C]/60 backdrop-blur-md border border-[rgba(0,220,255,0.1)] rounded-full py-3 pl-5 pr-12 text-sm text-arctic placeholder:text-mystic/40 focus:outline-none focus:ring-2 focus:ring-[#00EEFF]/50 transition-colors shadow-inner"
+                  className="w-full bg-[#08121C]/60 backdrop-blur-md border border-[rgba(255,255,255,0.1)] rounded-full py-3 pl-5 pr-12 text-sm text-arctic placeholder:text-mystic/40 focus:outline-none focus:ring-2 focus:ring-[rgba(255,255,255,0.2)] transition-colors shadow-inner"
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe to newsletter"
-                  className="absolute right-2 w-8 h-8 rounded-full bg-[#00EEFF] flex items-center justify-center text-[#08121C] hover:bg-[#00EEFF]/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-oceanic-noir focus:ring-[#00EEFF]"
+                  className="absolute right-2 w-8 h-8 rounded-full bg-arctic flex items-center justify-center text-[#08121C] hover:bg-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-oceanic-noir focus:ring-white"
                 >
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </button>
@@ -50,33 +50,33 @@ export function Footer() {
 
           {/* Links Columns */}
           <div className="md:col-span-4 lg:col-span-2 lg:col-start-6">
-            <h4 className="text-arctic font-mono font-bold text-xs mb-6 uppercase tracking-widest">Platform</h4>
+            <h4 className="text-mystic/80 font-mono text-label mb-6 uppercase">Platform</h4>
             <ul className="space-y-4">
               {['Product', 'Solutions', 'Pricing', 'Security', 'Enterprise'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-mystic/70 hover:text-[#00EEFF] font-sans text-sm transition-colors relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-[#00EEFF] after:transition-transform after:duration-300 hover:after:scale-x-100 inline-block">{link}</a>
+                  <a href="#" className="text-mystic/70 hover:text-arctic font-sans text-sm transition-colors inline-block">{link}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="md:col-span-4 lg:col-span-2">
-            <h4 className="text-arctic font-mono font-bold text-xs mb-6 uppercase tracking-widest">Resources</h4>
+            <h4 className="text-mystic/80 font-mono text-label mb-6 uppercase">Resources</h4>
             <ul className="space-y-4">
               {['Documentation', 'API Reference', 'Case Studies', 'Blog', 'Webinars'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-mystic/70 hover:text-[#00EEFF] font-sans text-sm transition-colors relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-[#00EEFF] after:transition-transform after:duration-300 hover:after:scale-x-100 inline-block">{link}</a>
+                  <a href="#" className="text-mystic/70 hover:text-arctic font-sans text-sm transition-colors inline-block">{link}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="md:col-span-4 lg:col-span-2">
-            <h4 className="text-arctic font-mono font-bold text-xs mb-6 uppercase tracking-widest">Company</h4>
+            <h4 className="text-mystic/80 font-mono text-label mb-6 uppercase">Company</h4>
             <ul className="space-y-4">
               {['About Us', 'Careers', 'Contact', 'Privacy Policy', 'Terms of Service'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-mystic/70 hover:text-[#00EEFF] font-sans text-sm transition-colors relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-[#00EEFF] after:transition-transform after:duration-300 hover:after:scale-x-100 inline-block">{link}</a>
+                  <a href="#" className="text-mystic/70 hover:text-arctic font-sans text-sm transition-colors inline-block">{link}</a>
                 </li>
               ))}
             </ul>
@@ -92,7 +92,7 @@ export function Footer() {
             {[Globe, MessageSquare, Mail].map((Icon, idx) => {
               const labels = ["Global Website", "Community Forum", "Email Support"];
               return (
-                <a key={idx} href="#" aria-label={labels[idx]} className="text-mystic/50 hover:text-[#00EEFF] transition-all duration-300">
+                <a key={idx} href="#" aria-label={labels[idx]} className="text-mystic/50 hover:text-arctic transition-colors duration-300">
                   <Icon className="w-5 h-5" aria-hidden="true" />
                 </a>
               );

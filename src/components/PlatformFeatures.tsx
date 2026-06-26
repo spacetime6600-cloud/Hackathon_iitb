@@ -56,7 +56,7 @@ function FeatureCard({ feature, index }: { feature: any, index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.165, 0.84, 0.44, 1] }}
-      className={`relative group rounded-[24px] overflow-hidden bg-oceanic-noir/40 backdrop-blur-xl border border-[rgba(0,220,255,0.1)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo flex flex-col p-8 md:p-10 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] ${
+      className={`relative group rounded-[24px] overflow-hidden bg-oceanic-noir/40 backdrop-blur-xl border border-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:scale-[1.01] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col p-8 md:p-10 hover:shadow-2xl ${
         index === 0 || index === 3 ? 'md:col-span-2 min-h-[500px]' : 'md:col-span-1 min-h-[400px]'
       } ${index === 0 ? 'md:row-span-2' : 'md:row-span-1'}`}
     >
@@ -73,7 +73,7 @@ function FeatureCard({ feature, index }: { feature: any, index: number }) {
       {/* Card Content */}
       <div className="mt-auto flex flex-col relative z-10">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 rounded-2xl bg-[#08121C] border border-[rgba(0,220,255,0.15)] flex items-center justify-center group-hover:scale-105 group-hover:border-[rgba(0,220,255,0.4)] transition-all duration-300 shadow-lg group-hover:shadow-[0_0_15px_rgba(0,220,255,0.2)]">
+          <div className="w-12 h-12 rounded-2xl bg-[#08121C] border border-[rgba(255,255,255,0.05)] flex items-center justify-center group-hover:scale-105 group-hover:border-[rgba(255,255,255,0.1)] transition-all duration-500 shadow-lg group-hover:shadow-xl">
             {feature.icon}
           </div>
           <div>

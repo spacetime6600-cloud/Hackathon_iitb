@@ -7,8 +7,7 @@ import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
-import { useEffect } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // Pre-compute particle positions outside component to avoid Math.random() on every render
 const PARTICLES = Array.from({ length: 24 }, (_, i) => ({
@@ -21,29 +20,7 @@ const PARTICLES = Array.from({ length: 24 }, (_, i) => ({
 }));
 
 function App() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const springConfig = { damping: 40, stiffness: 100, mass: 1 };
-  const smoothX = useSpring(mouseX, springConfig);
-  const smoothY = useSpring(mouseY, springConfig);
-
-  // ✅ Transforms computed at top level (not inside JSX) — fixes Hook rule violation
-  const glowX = useTransform(smoothX, v => v - 40);
-  const glowY = useTransform(smoothY, v => v - 40);
-
-  useEffect(() => {
-    mouseX.set(window.innerWidth / 2);
-    mouseY.set(window.innerHeight / 2);
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
-    };
-
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [mouseX, mouseY]);
+  // Unused mouse tracking variables removed for performance
 
   return (
     <div className="bg-oceanic-noir min-h-screen text-arctic font-sans relative overflow-x-hidden">
@@ -51,12 +28,7 @@ function App() {
       {/* 1. Subtle Vignette */}
       <div className="pointer-events-none fixed inset-0 z-50 shadow-[inset_0_0_150px_rgba(4,9,16,0.8)]" aria-hidden="true" />
 
-      {/* 2. Soft Mouse Glow — opacity 5%, radius 80px, lerped */}
-      <motion.div
-        aria-hidden="true"
-        className="pointer-events-none fixed z-40 hidden md:block rounded-full bg-[#00EEFF] blur-[40px]"
-        style={{ width: 80, height: 80, x: glowX, y: glowY, opacity: 0.05 }}
-      />
+      {/* Soft Mouse Glow removed per user request for performance/minimalism */}
       
       {/* 3. Almost Invisible Moving Noise Texture */}
       <motion.div 
