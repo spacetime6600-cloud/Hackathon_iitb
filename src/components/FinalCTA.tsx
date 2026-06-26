@@ -50,9 +50,9 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-[#08121C]/60 backdrop-blur-md inline-block px-4 py-2 rounded-full border border-[rgba(0,220,255,0.2)] mb-8"
+          className="bg-[#08121C]/60 backdrop-blur-md inline-block px-4 py-2 rounded-full border border-[rgba(0,220,255,0.2)] mb-4"
         >
-          <span className="text-[#00EEFF] text-xs font-mono uppercase tracking-widest font-bold flex items-center gap-2">
+          <span className="text-[#00EEFF] font-mono text-label uppercase font-semibold flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00EEFF] animate-pulse" />
             Ready for Production
           </span>
@@ -64,7 +64,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-          className="text-heading-1 font-sans font-extrabold text-arctic mb-6"
+          className="text-heading-1 font-sans font-extrabold text-arctic mb-8"
         >
           Transform Your Enterprise<br />
           with <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Intelligent AI</span>
@@ -75,7 +75,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-          className="text-mystic/70 font-sans text-body-lg leading-relaxed max-w-prose-wide mx-auto mb-10"
+          className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg leading-relaxed max-w-prose-wide mx-auto mb-10"
         >
           Join thousands of organizations already using AI to automate workflows, improve productivity and accelerate growth.
         </motion.p>

@@ -65,7 +65,7 @@ export function AnalyticsInterface() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold mb-5"
+            className="font-mono text-label text-mystic uppercase font-semibold mb-4"
           >
             Intelligent Automation Platform
           </motion.p>
@@ -75,7 +75,7 @@ export function AnalyticsInterface() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-heading-1 font-sans font-extrabold text-arctic leading-[1.05] max-w-3xl mx-auto mb-5"
+            className="text-heading-1 font-sans font-extrabold text-arctic leading-[1.05] max-w-3xl mx-auto mb-8"
           >
             Visualize How AI Agents<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Analyze, Decide &amp; Automate.</span>
@@ -116,7 +116,7 @@ export function AnalyticsInterface() {
                    <Activity className="w-5 h-5 text-[#00EEFF]" />
                  </div>
                  <div>
-                   <h3 className="text-arctic font-sans font-bold text-lg tracking-tight">System Dashboard</h3>
+                   <h3 className="text-heading-2 text-arctic font-sans font-bold tracking-tight">System Dashboard</h3>
                    <p className="text-mystic/60 text-xs font-sans mt-0.5">Live Enterprise Telemetry</p>
                  </div>
                </div>
@@ -129,14 +129,14 @@ export function AnalyticsInterface() {
              {/* Top KPI Row */}
              <div className="grid grid-cols-2 gap-6 relative z-10">
                 <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] group shadow-inner">
-                  <div className="text-mystic/60 text-xs font-sans mb-1 uppercase tracking-wider">AI Accuracy</div>
+                  <div className="text-heading-3 font-sans font-bold text-arctic mb-2">AI Accuracy</div>
                   <div className="text-arctic font-mono text-3xl font-bold">
                     <Counter from={0} to={99.8} duration={2} decimals={1} />
                     <span className="text-lg text-mystic">%</span>
                   </div>
                 </div>
                 <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] group shadow-inner">
-                  <div className="text-mystic/60 text-xs font-sans mb-1 uppercase tracking-wider">System Uptime</div>
+                  <div className="text-heading-3 font-sans font-bold text-arctic mb-2">System Uptime</div>
                   <div className="text-arctic font-mono text-3xl font-bold">
                     <Counter from={0} to={99.99} duration={2.5} decimals={2} />
                     <span className="text-lg text-mystic">%</span>
@@ -183,7 +183,7 @@ export function AnalyticsInterface() {
              {/* Bottom KPIs */}
              <div className="grid grid-cols-2 gap-6 relative z-10 flex-1">
                 <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] flex flex-col justify-between shadow-inner group">
-                   <div className="text-mystic/60 text-xs font-sans mb-3 uppercase tracking-wider">Tasks Automated</div>
+                   <div className="text-heading-3 font-sans font-bold text-arctic mb-3">Tasks Automated</div>
                    <div className="flex items-center gap-2">
                      <GitMerge className="w-5 h-5 text-[#00EEFF]/50" />
                      <div className="text-arctic font-mono text-2xl font-bold">
@@ -193,7 +193,7 @@ export function AnalyticsInterface() {
                    </div>
                 </div>
                 <div className="bg-[#08121C]/60 p-6 rounded-2xl border border-[rgba(0,220,255,0.05)] hover:border-[rgba(0,220,255,0.3)] hover:-translate-y-[4px] hover:scale-[1.01] transition-all duration-300 ease-out-expo hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),_0_0_30px_rgba(0,220,255,0.15)] flex flex-col justify-between shadow-inner group">
-                   <div className="text-mystic/60 text-xs font-sans mb-3 uppercase tracking-wider">Live AI Decisions</div>
+                   <div className="text-heading-3 font-sans font-bold text-arctic mb-3">Live AI Decisions</div>
                    <div className="flex items-center gap-2">
                      <Cpu className="w-5 h-5 text-[#FFC801]/70" />
                      <div className="text-arctic font-mono text-2xl font-bold">

@@ -65,7 +65,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-4"
           >
             <span className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold">Social Proof</span>
           </motion.div>
@@ -75,7 +75,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-heading-1 font-sans font-extrabold text-arctic mb-5"
+            className="text-heading-1 font-sans font-extrabold text-arctic mb-8"
           >
             What Enterprise<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Leaders Say</span>
@@ -85,7 +85,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-mystic/70 font-sans text-body-lg max-w-prose-wide mx-auto"
+            className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg max-w-prose-wide mx-auto"
           >
             Discover how organizations worldwide are transforming operations through AI-powered automation.
           </motion.p>
@@ -116,7 +116,7 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-arctic/90 font-sans text-body-lg leading-relaxed flex-1 mb-10 relative z-10">
+                <p className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg leading-relaxed flex-1 mb-10 relative z-10">
                   "{test.quote}"
                 </p>
                 

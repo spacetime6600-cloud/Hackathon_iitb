@@ -110,10 +110,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-nocturnal bg-nocturnal/30 backdrop-blur-md mb-8 mx-auto lg:mx-0 w-fit"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-nocturnal bg-nocturnal/30 backdrop-blur-md mb-4 mx-auto lg:mx-0 w-fit"
           >
             <span className="w-2 h-2 rounded-full bg-forsythia shadow-[0_0_8px_#FFC801] animate-pulse" />
-            <span className="text-mystic font-mono text-[11px] uppercase tracking-[0.12em] font-semibold">AI-Powered Enterprise Automation</span>
+            <span className="text-mystic font-mono text-label uppercase font-semibold">AI-Powered Enterprise Automation</span>
           </motion.div>
           
           {/* Hero Heading — 80–96px desktop, 64px tablet, 44px mobile */}
@@ -122,11 +122,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08, ease: [0.165, 0.84, 0.44, 1] }}
-            className="font-sans font-extrabold text-arctic leading-[0.95] tracking-[-0.035em] mb-8
-                       text-[clamp(2.75rem,8vw,6rem)]
-                       lg:text-[clamp(3.5rem,6vw,6rem)]
-                       xl:text-[clamp(4rem,5.5vw,6rem)]
-                       mx-auto lg:mx-0 max-w-[95%] lg:max-w-none"
+            className="font-sans font-extrabold text-arctic leading-[0.95] mb-8 max-w-[95%] lg:max-w-none text-display mx-auto lg:mx-0"
           >
             Unlock<br />
             Autonomous AI<br />
@@ -140,8 +136,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-[#C8D2DA] font-sans leading-[1.7] max-w-[600px] mx-auto lg:mx-0 mb-10
-                       text-[clamp(1rem,1.5vw,1.25rem)]"
+            className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg max-w-[600px] mx-auto lg:mx-0 mb-10"
           >
             Empower enterprises with intelligent automation, predictive analytics, 
             autonomous AI agents and real-time decision making through one unified platform.

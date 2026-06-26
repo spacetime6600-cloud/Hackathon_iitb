@@ -80,10 +80,10 @@ function FeatureCard({ feature, index }: { feature: any, index: number }) {
               <div className="font-mono text-label text-mystic/80 uppercase tracking-[0.1em] mb-2 bg-[#08121C]/80 border border-[rgba(0,220,255,0.1)] rounded-md px-2.5 py-1 w-fit shadow-sm group-hover:border-[rgba(0,220,255,0.3)] transition-colors">
                 {feature.label}
               </div>
-          <h3 className="text-heading-2 font-sans font-semibold text-arctic tracking-tight">{feature.title}</h3>
+          <h3 className="text-heading-3 font-sans font-bold text-arctic tracking-tight">{feature.title}</h3>
           </div>
         </div>
-        <p className="text-mystic/70 font-sans text-body-lg leading-relaxed max-w-prose-narrow">
+        <p className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg leading-relaxed max-w-prose-narrow">
           {feature.description}
         </p>
       </div>
@@ -324,7 +324,7 @@ export function PlatformFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-nocturnal bg-nocturnal/20 mb-4"
           >
             <span className="font-mono text-label text-mystic uppercase tracking-[0.1em] font-semibold">Platform Capabilities</span>
           </motion.div>
@@ -334,7 +334,7 @@ export function PlatformFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-heading-1 font-sans font-extrabold text-arctic mb-5"
+            className="text-heading-1 font-sans font-extrabold text-arctic mb-8"
           >
             Engineered for<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-forsythia to-saffron">Enterprise Scale.</span>
@@ -344,7 +344,7 @@ export function PlatformFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.165, 0.84, 0.44, 1] }}
-            className="text-mystic/70 font-sans text-body-lg max-w-prose-wide leading-relaxed"
+            className="text-[rgba(244,246,244,0.72)] font-sans text-body-lg max-w-prose-wide leading-relaxed"
           >
             A unified architecture combining predictive analytics, autonomous agents, and real-time data processing into one beautiful interface.
           </motion.p>
